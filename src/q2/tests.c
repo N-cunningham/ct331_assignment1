@@ -5,7 +5,12 @@
 void runTests(){
   printf("Tests running...\n");
   listElement* l = createEl("Test String (1).", 30);
+
+
+
+  
   //printf("%s\n%p\n", l->data, l->next);
+
   //Test create and traverse
   traverse(l);
   printf("\n");
@@ -20,6 +25,25 @@ void runTests(){
   deleteAfter(l);
   traverse(l);
   printf("\n");
+
+  //Returns the number of elements in a linked list  
+  printf("Length of List: %d \n", length(l));
+  
+
+ 
+  listElement** dp = &l;
+  push(dp , "I DID IT!", 30);
+  printf("size after push: %d \n", length(*dp));
+
+  pop(dp);
+
+  prinf("size after pop: %d \n", length(*dp));
+
+
+
+  printf("\n");
+
+
 
   printf("\nTests complete.\n");
 }
